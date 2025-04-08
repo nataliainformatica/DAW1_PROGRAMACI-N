@@ -71,7 +71,7 @@ Implementa los dos métodos para que una vez autenticada la persona, se pueda re
 
 Para los registros, se dispone de una colección HashMap, <Entrada,Salida>
 
-No se permite la salida, si no hay una Entrada. Si se trata de registrar una salida, cuando no hay entrada, se lanzará una excepción controlada (checked), que capturará los datos de la persona y la fecha y hora. En el tratamiento de esta excepción, se guardarán los datos en el siguiente formato:
+No se permite la salida, si no hay una Entrada. Si se trata de registrar una salida, cuando no hay entrada, se lanzará una excepción controlada (checked), que capturará los datos de la persona y la fecha y hora. En el tratamiento de esta excepción, se guardarán los datos en un fichero "salidaNoautorizada.log" con  el siguiente formato:
 
 Fecha – hora – usuario: xxxx – “intento de salida sin registro de entrada”
 
@@ -95,3 +95,23 @@ La persona autenticada podrá ver su historial de accesos, incluyendo fecha y ho
 ----------
 
 Este ejercicio evalúa conocimientos en manejo de colecciones, excepciones, encapsulación y uso de ficheros.
+
+
+RÚBRICA PARA LA EVALUACIÓN
+
+El código debe compilar y poder ejecutarse. 
+Deben implementarse  al menos las siguientes clases: Principal, Persona, Registro,Entrada, Salida y ExcepcionSalida. 
+(1 puntos) Funcionalidad menú:   
+    (se considera funcional si muestra las dos opciones (entrada y salida).
+(1 puntos) Funcionalidad 1: AUTENTICACIÓN DE PERSONAS
+   (se considera funcional si lee el fichero de registro y devuelve la instancia de la persona registrada)
+
+(2 puntos) Funcionalidad registrar entrada: 
+    (se considera funcional si solo permite entrar si no hay un registro de entrada, para la persona registrada, sin salida).
+(2 puntos) Funcionalidad mostrar historial de Entrada: 
+   (se considera funcional, si muestra un registro de las entradas de la persona registrada, ordenadas por fecha y hora)
+(2 puntos) Funcionalidad registrar salida: 
+    (se considera funcional si solo permite salir, si hay un registro de entrada, para la persona registrada, sin salida)
+(2 puntos) Funcionalidad de lanzar excepción si se trata de salir, y no hay un registro de entrada para la persona registrada, sin salida.  Deberá guardar los mensajes de error especificados en el enunciado en un fichero de caracteres. 
+    
+   
