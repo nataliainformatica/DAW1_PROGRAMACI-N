@@ -8,6 +8,7 @@ Dirección
 De esta clase base heredan Alumno y Profesor
 
 Alumno
+
 Con los atributos:  
 Grado (Nombre (String) , curso (int), - nota media(double)), 
 
