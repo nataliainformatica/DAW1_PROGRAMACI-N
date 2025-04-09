@@ -10,7 +10,7 @@ De esta clase base heredan Alumno y Profesor
 Alumno
 
 Con los atributos:  
-Grado (Nombre (String) , curso (int), - nota media(double)), 
+Grado (Nombre (String) , curso (enum (primer,segundo), - nota media(double)), 
 
 Como requisito, al crear la instancia de Alumno, 
 si recibe un grado con una nota media de cero
@@ -45,7 +45,9 @@ Cada opción debe escribirse en un método:
 6. Muestra las personas del aula (profesores y alumnos)
   ```  public static muestraTodasPersonas()```
 
-Si al introducir el curso, el usuario introduce un carácter que no sea un número
+Si al introducir el curso, el usuario introduce un valor que no corresponda (no es del tipo enumerado)
 se mostrará el mensaje: "No has introducido un curso correcto, solo puedes poner números)
+Si al introducir la nota media del grado, se introduce un  carácter que no sea un número
+se mostrará el mensaje: "No has introducido una nota media correcta, solo puedes poner números)
 
 
