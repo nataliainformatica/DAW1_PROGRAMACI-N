@@ -36,9 +36,11 @@ Cada opción debe escribirse en un método:
 2. Introduce static un Profesor ( aquí se mostrará el menú para pedir los datos)
     ```public Profesor introduceProfesor();```
 3. Muestra los alumnos del grado DAW, segundo (2)
-   ``` public static muestraAlumnos(nombreGrado, curso)```
-4. Muestra los alumnos ordenados por nombre. 
-5. Muestra las personas del aula (profesores y alumnos)
+
+    ``` public static muestraAlumnos(nombreGrado, curso)```
+   
+5. Muestra los alumnos ordenados por nombre. 
+6. Muestra las personas del aula (profesores y alumnos)
   ```  public static muestraTodasPersonas()```
 
 Si al introducir el curso, el usuario introduce un carácter que no sea un número
