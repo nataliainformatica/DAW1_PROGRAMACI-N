@@ -4,6 +4,9 @@ Persona, que es una clase base con los atributos:
 Nombre
 Edad
 Dirección
+ * Si la clase hija es Alumno, el método mostrarTipo devolverá  Alumno con nombre: nombre
+ * Si la clase hija es Profesor, el método mostrarTipo devolverá Sr/Sra nombre
+ * La clase Persona no se podrá instanciar. Y el método mostrarTipo, no se conoce cómo implementarlo
 
 De esta clase base heredan Alumno y Profesor
 
