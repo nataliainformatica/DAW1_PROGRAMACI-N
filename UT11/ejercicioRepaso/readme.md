@@ -47,6 +47,7 @@ Cada opción debe escribirse en un método:
 
 Si al introducir el curso, el usuario introduce un valor que no corresponda (no es del tipo enumerado)
 se mostrará el mensaje: "No has introducido un curso correcto, solo puedes poner números)
+
 Si al introducir la nota media del grado, se introduce un  carácter que no sea un número
 se mostrará el mensaje: "No has introducido una nota media correcta, solo puedes poner números)
 
