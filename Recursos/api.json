@@ -1,0 +1,95 @@
+{
+  "drinks": [
+    {
+      "strDrink": "Afterglow",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/vuquyv1468876052.jpg",
+      "idDrink": "12560",
+      "ingredients": ["Grenadine", "Orange Juice", "Pineapple Juice"]
+    },
+    {
+      "strDrink": "Alice Cocktail",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/qyqtpv1468876144.jpg",
+      "idDrink": "12562",
+      "ingredients": ["Grenadine", "Orange Juice", "Pineapple Juice"]
+    },
+    {
+      "strDrink": "Aloha Fruit punch",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/wsyvrt1468876267.jpg",
+      "idDrink": "12862",
+      "ingredients": ["Pineapple Juice", "Lemonade", "Orange Juice", "Ginger Ale"]
+    },
+    {
+      "strDrink": "Apello",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/uptxtv1468876415.jpg",
+      "idDrink": "15106",
+      "ingredients": ["Orange Juice", "Grapefruit Juice", "Apple Juice"]
+    },
+    {
+      "strDrink": "Apple Berry Smoothie",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/xwqvur1468876473.jpg",
+      "idDrink": "12710",
+      "ingredients": ["Apple Juice", "Berries", "Yogurt"]
+    },
+    {
+      "strDrink": "Apple Karate",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/syusvw1468876634.jpg",
+      "idDrink": "12564",
+      "ingredients": ["Apple Juice", "Carrot Juice"]
+    },
+    {
+      "strDrink": "Banana Cantaloupe Smoothie",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/uqxqsy1468876703.jpg",
+      "idDrink": "12708",
+      "ingredients": ["Banana", "Cantaloupe", "Yogurt"]
+    },
+    {
+      "strDrink": "Banana Milk Shake",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/rtwwsx1472720307.jpg",
+      "idDrink": "12654",
+      "ingredients": ["Banana", "Milk", "Vanilla Ice Cream"]
+    },
+    {
+      "strDrink": "Banana Strawberry Shake",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/vqquwx1472720634.jpg",
+      "idDrink": "12656",
+      "ingredients": ["Banana", "Strawberries", "Milk", "Honey"]
+    },
+    {
+      "strDrink": "Banana Strawberry Shake Daiquiri",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/uvypss1472720581.jpg",
+      "idDrink": "12658",
+      "ingredients": ["Banana", "Strawberries", "Rum", "Sugar"]
+    },
+    {
+      "strDrink": "Bora Bora",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/xwuqvw1473201811.jpg",
+      "idDrink": "12572",
+      "ingredients": ["Pineapple Juice", "Lemon Juice", "Grenadine", "Coconut Syrup"]
+    },
+    {
+      "strDrink": "Castillian Hot Chocolate",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/3nbu4a1487603196.jpg",
+      "idDrink": "12730",
+      "ingredients": ["Dark Chocolate", "Milk", "Sugar", "Cornstarch"]
+    },
+    {
+      "strDrink": "Chocolate Beverage",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/jbqrhv1487603186.jpg",
+      "idDrink": "12732",
+      "ingredients": ["Cocoa Powder", "Milk", "Sugar"]
+    },
+    {
+      "strDrink": "Chocolate Drink",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/q7w4xu1487603180.jpg",
+      "idDrink": "12734",
+      "ingredients": ["Cocoa Powder", "Water", "Sugar", "Milk"]
+    },
+    {
+      "strDrink": "Coke and Drops",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/yrtxxp1472719367.jpg",
+      "idDrink": "17108",
+      "ingredients": ["Coca-Cola", "Liquorice Drops"]
+    },
+    ...
+  ]
+}
