@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import es.avellaneda.model.Contacto;
 import es.avellaneda.model.ContactoDAO;
 
-public class ProcesarFormularioServlet extends HttpServlet {
+public class ProcesarFormularioServletcopy extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
@@ -18,18 +18,12 @@ public class ProcesarFormularioServlet extends HttpServlet {
         String mensaje = req.getParameter("mensaje");
 
         Contacto contacto = new Contacto(nombre, email, mensaje);
-
-
         PrintWriter out = resp.getWriter();
         try {
           System.out.println("PROCESAR FORMULARIO--");
-
-          // consultar contacto
-          consultarContacto(contacto);
-
-
+          crearContacto(contacto);
           resp.setContentType("text/html");
-          /// cambiaremos la respuesta al usuario
+         
           out.println("<h2>Datos recibidos</h2>");
           out.println("<h3>Contacto creado correctamente</h3>");
           out.println("<p><strong>Nombre:</strong> " + nombre + "</p>");
@@ -44,13 +38,13 @@ public class ProcesarFormularioServlet extends HttpServlet {
       
     }
 
-    private void consultarContacto(Contacto contacto) throws ClassNotFoundException, SQLException{
-      System.out.println("LLAMADA A CONSULTAR CONTACTO-v3");
+    private void crearContacto(Contacto contacto) throws ClassNotFoundException, SQLException{
+      System.out.println("LLAMADA A CREAR CONTACTO-v3");
   
       
         ContactoDAO contactoDAO = new ContactoDAO( );
-              if(!contactoDAO.consultarContacto(contacto))){
-                throw new SQLException("ERROR DE SQL");
+              if(!contactoDAO.insertarUsuario(contacto)){
+                throw new SQLException("ERROR DE INSERCIÓN");
               }
        
   
