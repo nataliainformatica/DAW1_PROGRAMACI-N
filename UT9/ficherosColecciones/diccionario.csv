@@ -1,0 +1,50 @@
+palabra,categoria
+feliz,Emociones Positivas
+genial,Emociones Positivas
+contento,Emociones Positivas
+maravilloso,Emociones Positivas
+alegría,Emociones Positivas
+amor,Emociones Positivas
+triste,Emociones Negativas
+mal,Emociones Negativas
+enojado,Emociones Negativas
+deprimido,Emociones Negativas
+odio,Emociones Negativas
+miedo,Emociones Negativas
+pensar,Procesos Cognitivos
+dudar,Procesos Cognitivos
+creer,Procesos Cognitivos
+entender,Procesos Cognitivos
+imaginar,Procesos Cognitivos
+amigos,Procesos Sociales
+familia,Procesos Sociales
+madre,Procesos Sociales
+padre,Procesos Sociales
+hermano,Procesos Sociales
+relación,Procesos Sociales
+dolor,Salud Física
+enfermo,Salud Física
+salud,Salud Física
+cuerpo,Salud Física
+fiebre,Salud Física
+lesión,Salud Física
+doctor,Salud Física
+hospital,Salud Física
+estrés,Salud Mental
+ansiedad,Salud Mental
+depresión,Salud Mental
+terapia,Salud Mental
+psicólogo,Salud Mental
+agotado,Salud Mental
+insomnio,Salud Mental
+confusión,Salud Mental
+dinero,Dinero y Economía
+pagar,Dinero y Economía
+ahorrar,Dinero y Economía
+gastar,Dinero y Economía
+trabajo,Dinero y Economía
+salario,Dinero y Economía
+precio,Dinero y Economía
+cuenta,Dinero y Economía
+crédito,Dinero y Economía
+deuda,Dinero y Economía
