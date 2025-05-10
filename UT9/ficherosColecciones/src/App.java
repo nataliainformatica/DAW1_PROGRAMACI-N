@@ -1,17 +1,17 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOError;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-
-
 public class App {
     private static Map<String,String> diccionario 
         = new HashMap<String,String>(); 
+
+     private static      Map<String,Integer> contadorMap = new HashMap<>();; 
             public static void main(String[] args) throws Exception {
                 lecturaDiccionario(); 
                 menu();
@@ -36,13 +36,13 @@ public class App {
             case "1": 
                  System.out.println("Introduce el texto que quieres analizar");
                  texto = sc.nextLine(); 
-                 contadorMap= analizarTexto(texto);
-                 mostrarResultados(contadorMap);
+                  analizarTexto(texto);
+                 mostrarResultados();
                 break;
             case "2":
                 texto= leerFichero();
-                contadorMap= analizarTexto(texto);
-                mostrarResultados(contadorMap);
+                 analizarTexto(texto);
+                mostrarResultados();
             case "3": 
                 continua = false; 
             default:
@@ -93,7 +93,8 @@ public class App {
                 if (dosPalabras.length == 2) {
                     String palabra = dosPalabras[0].toLowerCase();
                     String categoria = dosPalabras[1].toLowerCase();
-                    diccionario.put(palabra,categoria);    
+                    diccionario.put(palabra,categoria);   
+                    contadorMap.put(categoria,0); 
                 }  
             }
 
@@ -105,12 +106,12 @@ public class App {
 
     }
 
-    private static Map<String,Integer> analizarTexto(String texto){
+    private static void analizarTexto(String texto){
 
         // para almacenar las repeticiones de las categorías
         // usaré map <categoria,repeticiones> == <String,Integer>
 
-        Map<String,Integer> contadorMap = new HashMap<>();
+        
         String[] textoAnalizar = texto.toLowerCase().split(" "); 
 
         // Analizar cada una de las palabras del diccionario
@@ -125,9 +126,9 @@ public class App {
                         // contadorMap.get(entry.getKey()); 
                         // coger el valor que tiene el map para la posición de la clave
                         // put(emociones,+1)
-                    System.out.println("CATEGORÍA " + entry.getValue()); 
+                   // System.out.println("CATEGORÍA " + entry.getValue()); 
                    
-                    System.out.println("VALOR" + contadorMap.get(entry.getValue()));  
+                   // System.out.println("VALOR" + contadorMap.get(entry.getValue()));  
                     //diccionario clave = palabra, valor = categoría 
                     // contadorMap ==>  clave=diccionario.categoría, valor=contadorMap.valor++
                     // contadorMap ==>  clave=entry.getValue() , valor = contadorMap.getorDefault(clave=entry.getValue())
@@ -136,7 +137,7 @@ public class App {
                     contadorMap.put(entry.getValue(),
                             contadorMap.getOrDefault(entry.getValue(), 0) + 1); 
 
-                            System.out.println("VALOR" + contadorMap.get(entry.getValue()));   
+                           
 
                             // Returns the value to which the specified key is mapped, 
                             //or defaultValue if this map contains no mapping for the key.
@@ -146,9 +147,9 @@ public class App {
 
             
         }
-        return contadorMap; 
+       
     }
-    private static void mostrarResultados(Map<String,Integer> contadorMap){
+    private static void mostrarResultados(){
         // mostrar los resultados que tengo en el contadorMap
         if(contadorMap.isEmpty()){
             System.out.println("No se han encontrado resultados");
