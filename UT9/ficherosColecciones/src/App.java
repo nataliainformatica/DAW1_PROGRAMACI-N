@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
+
+
 public class App {
     private static Map<String,String> diccionario 
         = new HashMap<String,String>(); 
@@ -125,9 +127,15 @@ public class App {
                         // put(emociones,+1)
                     System.out.println("CATEGORÍA " + entry.getValue()); 
                    
-                    System.out.println("VALOR" + contadorMap.get(entry.getValue()));   
+                    System.out.println("VALOR" + contadorMap.get(entry.getValue()));  
+                    //diccionario clave = palabra, valor = categoría 
+                    // contadorMap ==>  clave=diccionario.categoría, valor=contadorMap.valor++
+                    // contadorMap ==>  clave=entry.getValue() , valor = contadorMap.getorDefault(clave=entry.getValue())
+                    // 
+                    
                     contadorMap.put(entry.getValue(),
-                            contadorMap.getOrDefault(entry.getKey(), 1) + 1); 
+                            contadorMap.getOrDefault(entry.getValue(), 0) + 1); 
+
                             System.out.println("VALOR" + contadorMap.get(entry.getValue()));   
 
                             // Returns the value to which the specified key is mapped, 
