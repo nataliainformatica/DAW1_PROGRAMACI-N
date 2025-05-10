@@ -701,10 +701,11 @@ ACE
 
 hjl
 
-# Ejercicio ANÁLISIS DE TEXTO
+# Ejercicio 10: ANÁLISIS DE TEXTO
 
 Deberás  desarrollar una aplicación que permita analizar textos en español y determinar la cantidad de palabras que pertenecen a diferentes categorías; por ejemplo: emocionales, psicológicas y sociales, utilizando un diccionario**  en el que se cada palabra tiene su categoría definida.
 La aplicación debe ser capaz de leer el texto desde dos fuentes posibles:
+
 1.	Entrada por consola (escribiendo el texto manualmente).
 2.	Un archivo de texto “nombre”.txt en la ruta de la aplicación (no es necesario implementar la función de escritura del fichero .txt)
 El análisis se basará en un diccionario cargado desde un archivo CSV que contiene las palabras  asociadas a cada una de  las  categorías  que se pretenden evaluar (se proporciona como recursos). 
