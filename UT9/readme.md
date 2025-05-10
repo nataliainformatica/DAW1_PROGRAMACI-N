@@ -729,6 +729,7 @@ Errores y Excepciones:
 6.	Si el archivo de texto no puede ser leído o el archivo CSV está mal formado, el programa debe informar al usuario y no fallar inesperadamente.
 
 Ejemplo del contenido del diccionario: 
+```
 palabra,categoria
 feliz,Emociones Positivas
 genial,Emociones Positivas
@@ -736,12 +737,14 @@ triste,Emociones Negativas
 ansiedad,Salud Mental
 psicólogo,Salud Mental
 ...
+```
 
 // no es necesario que se muestre exactamente igual a la traza
+```
 ===== RESULTADO DEL ANÁLISIS====================
 [Emociones Positivas] :  3 palabra(s)
 [Emociones Negativas] : 1 palabra(s)
 [Salud Mental] : 2 palabra(s)
 [Dinero y Economía] : 0 palabra(s)
 
-
+```
