@@ -4,6 +4,11 @@ CREATE TABLE IF NOT EXISTS usuarios (
     password TEXT NOT NULL
 );
 
+
+
+INSERT INTO usuarios (nombre, password) VALUES ('juan', '1234');
+INSERT INTO usuarios (nombre, password) VALUES ('maria', 'abcd');
+
 /****************************index.jsp
 
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
