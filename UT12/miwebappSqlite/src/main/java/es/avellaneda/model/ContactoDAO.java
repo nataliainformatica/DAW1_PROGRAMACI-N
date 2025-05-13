@@ -34,6 +34,36 @@ public class ContactoDAO {
     }
 
  
+   public boolean consultarContacto(Contacto contacto){
+        // conexión , preparar la consulta , recoger el resultado
+        // tratar el resultset
+        //emp(empname,email)
+        String sql = "SELECT empname, email  FROM emp"; 
+        ResultSet resultado; 
+        try (Connection conn = DatabaseConnection.getConnection( );
+        PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            resultado = pstmt.executeQuery(); 
+            while(resultado.next()){
+                // fila con empname , email
+                // comprobar si tengo el contacto recibido en la bbdd
+                // contacto.getNombre().equals(el valor de la bbdd)
 
+                String nombre = resultado.getString(1);
+                String email = resultado.getString(2); 
+                if(contacto.getNombre().equals(nombre) 
+                        && contacto.getEmail().equals(email)){
+                            // HE ENCONTRADO UN MATCH
+                            return true; 
+                        }
+            }  
+              
+
+        }catch (SQLException e) {
+            System.out.println("ERROR EN LA CONEXIÓN");
+            e.printStackTrace();
+        }
+        return false;
+
+    }
 
 }
