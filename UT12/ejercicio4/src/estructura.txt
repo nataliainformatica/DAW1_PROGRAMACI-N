@@ -1,0 +1,12 @@
+MiProyectoWeb/
+├── pom.xml
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── es/avellaneda/servlets/
+│       │       └── HolaServlet.java
+│       └── webapp/
+│           ├── index.jsp
+            ├── saludo.jsp
+│           └── WEB-INF/
+│               └── web.xml (si usas anotaciones no es necesario)
