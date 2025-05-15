@@ -2,7 +2,7 @@
 
 ##EJERCICIO 3
 
-modificar el código
+Usando el "esqueletoProyecto" proporcionado , deberás modificar el código
 desde la página principal, nos mostrará un formulario de login
 si el usuario está registrado
 nos mostrará un mensaje , por ejemplo con el id que tiene el usuario (en la tabla)
