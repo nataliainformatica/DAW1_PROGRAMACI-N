@@ -32,6 +32,12 @@ CREATE TABLE canciones (
     genero TEXT
 
 );
+
+
+
+<img width="572" alt="image" src="https://github.com/user-attachments/assets/8e1ce0d4-e550-4afd-8fb7-6508a21b4342" />
+
+
 ```
 ### FICHERO CSS
 ```
