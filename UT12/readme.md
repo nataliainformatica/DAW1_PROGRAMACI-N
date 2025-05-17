@@ -152,6 +152,9 @@ Desarrolla el código que permitirá al pulsar el botón MODIFICAR, actualizar l
 Desarrolla la funcionalidad del botón SIGUIENTE, que mostrará otra canción (aleatoria). 
 
 
+# Ejercicio 6
+Modifica el ejercicio anterior de forma que al arrancar la apliación, automáticamente muestre el formulario con una canción aleatoria de la base de datos. 
+
 
 
 
