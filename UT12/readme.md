@@ -148,5 +148,10 @@ El botón dirigirá a un servlet que se encargará de buscar la información de 
 ```
 
 
+Desarrolla el código que permitirá al pulsar el botón MODIFICAR, actualizar la canción (identificada por el título - que no se puede modificar), con los datos que modifique el usuario. 
+Desarrolla la funcionalidad del botón SIGUIENTE, que mostrará otra canción (aleatoria). 
+
+
+
 
 
