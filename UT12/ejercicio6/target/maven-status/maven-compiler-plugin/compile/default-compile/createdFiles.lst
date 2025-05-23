@@ -1,0 +1,5 @@
+es\avellaneda\servlets\LoginServlet.class
+es\avellaneda\model\DatabaseConnection.class
+es\avellaneda\exceptions\NotRegisteredException.class
+es\avellaneda\model\Pokemon.class
+es\avellaneda\model\DAOpokemon.class
