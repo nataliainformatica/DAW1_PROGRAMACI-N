@@ -23,6 +23,44 @@ pass (varchar)
 ## Ejercicio 5
 Al arrancar la aplicación, mostrará un pequeño formulario que permitirá introducir el título de la canción: 
 
+
+```
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    </head>
+
+    <body>
+         <div>
+        <h2>Ingresa el título</h2>
+       
+        <form action="entrada" method="post">
+
+            <input type="text" name="titulo" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <p style="color:red;">
+            <%= request.getAttribute("mensaje") !=null ? request.getAttribute("mensaje") : "" %>
+        </p>
+        </div>
+    </body>
+
+    </html>```
+
+
+
+
+
+
+
+
+
 ```
 CREATE TABLE canciones (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -153,8 +191,174 @@ Desarrolla la funcionalidad del botón SIGUIENTE, que mostrará otra canción (a
 
 
 # Ejercicio 6
-Modifica el ejercicio anterior de forma que al arrancar la apliación, automáticamente muestre el formulario con una canción aleatoria de la base de datos. 
+
+<img width="759" alt="image" src="https://github.com/user-attachments/assets/b1d122c8-bd05-4699-9c5c-fc7f396d8131" />
 
 
+
+<img width="353" alt="image" src="https://github.com/user-attachments/assets/8db45cce-8e06-45b6-8fa0-96cd1734dc66" />
+
+
+
+```
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    </head>
+
+    <body>
+         <div>
+        <h2>Ingresa el título</h2>
+       
+        <form action="entrada" method="post">
+
+            <input type="text" name="titulo" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <p style="color:red;">
+            <%= request.getAttribute("mensaje") !=null ? request.getAttribute("mensaje") : "" %>
+        </p>
+        </div>
+    </body>
+
+    </html>
+```
+
+
+base de datos 
+
+```
+CREATE TABLE pokemon (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL UNIQUE,
+    imagen TEXT NOT NULL
+);
+
+-- Insertar primeros 20 Pokémon
+INSERT INTO pokemon (nombre, imagen) VALUES ('bulbasaur', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('ivysaur', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('venusaur', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('charmander', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('charmeleon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('charizard', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('squirtle', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('wartortle', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('blastoise', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('caterpie', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('metapod', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('butterfree', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('weedle', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('kakuna', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('beedrill', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('pidgey', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('pidgeotto', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('pidgeot', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('rattata', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('raticate', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('spearow', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('fearow', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('ekans', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('arbok', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('pikachu', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('raichu', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('sandshrew', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('sandslash', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('nidoran-f', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('nidorina', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('nidoqueen', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('nidoran-m', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('nidorino', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('nidoking', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('clefairy', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('clefable', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('vulpix', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('ninetales', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('jigglypuff', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png');
+INSERT INTO pokemon (nombre, imagen) VALUES ('wigglytuff', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png');
+
+
+
+
+select * from pokemon;
+```
+
+
+Página de resultado: 
+
+```
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ficha del Pokémon</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #f0f8ff, #e6f0ff);
+            color: #333;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .pokemon-card {
+            display: inline-block;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 400px;
+            margin-top: 30px;
+        }
+
+        .pokemon-card h2 {
+            color: #ff4444;
+            text-transform: capitalize;
+        }
+
+        .pokemon-card img {
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>POKEDEX DAW 1A</h1>
+
+    <div class="pokemon-card">
+        <h2><%= request.getAttribute("nombre") %></h2>
+
+        <img src="<%= request.getAttribute("imagenUrl") %>" alt="Imagen de <%= request.getAttribute("nombre") %>">
+
+        <br>
+        <a class="btn" href="index.html">Volver a buscar</a>
+    </div>
+</body>
+</html>
+
+```
 
 
