@@ -201,33 +201,167 @@ Desarrolla la funcionalidad del botón SIGUIENTE, que mostrará otra canción (a
 
 
 ```
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
-    <head>
-        <title>Formulario</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="estilos.css">
+<head>
+    <meta charset="UTF-8">
+    <title>POKEDEX WEB</title>
+    <!-- https://www.flaticon.com/search?word=pokemon-->
+    <link rel="icon" href="pokeball.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f9f9f9, #d6eaff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    </head>
+        h1 {
+            color: #e3350d;
+            margin-top: 40px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px #fff;
+        }
 
-    <body>
-         <div>
-        <h2>Ingresa el título</h2>
-       
-        <form action="entrada" method="post">
+        h2 {
+            color: #3b4cca;
+            margin-bottom: 20px;
+        }
 
-            <input type="text" name="titulo" required>
-            <button type="submit">Buscar</button>
+        div {
+            background-color: white;
+            border: 2px solid #3b4cca;
+            border-radius: 10px;
+            padding: 30px 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[name="nombrePokemon"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        input[type="submit"] {
+            background-color: #ffcb05;
+            color: #2a75bb;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f2b807;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1em;
+            background-color: #fff;
+        }
+
+        button[type="submit"] {
+            background-color: #ffcb05;
+            color: #2a75bb;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button[type="submit"]:hover {
+            background-color: #f2b807;
+            transform: translateY(-2px);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+            background-color: #e6a800;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>POKEDEX DAW 1A</h1>
+    <h2>Escribe el nombre del Pokemon del que quieres ver la imagen</h2>
+    <div>
+        <form action="GetPokemonServlet" method="post">
+            <label for="nombrePokemon">Nombre:</label>
+            <select name="nombrePokemon" id="nombrePokemon" required>
+                <option value="">-- Elige un Pokémon --</option>
+                <option value="pikachu">Pikachu</option>
+                <option value="bulbasaur">Bulbasaur</option>
+                <option value="charmander">Charmander</option>
+                <option value="squirtle">Squirtle</option>
+                <option value="eevee">Eevee</option>
+                <option value="snorlax">Snorlax</option>
+                <option value="mew">Mew</option>
+                <option value="gengar">Gengar</option>
+                <!-- Puedes añadir más Pokémon aquí -->
+            </select>
+            <!--
+			<p>
+				<label>Ficha completa del pokemon:</label><input type="radio"
+					name="tipo" value="info" />
+			</p>
+			<p>
+				<label>Mostrar imagen FRONT: </label><input type="radio" name="tipo"
+					value="front" />
+			</p>
+			<p>
+				<label>Mostrar imagen BACK: </label><input type="radio" name="tipo"
+					value="back" />
+			</p>
+            -->
+
+            <button type="submit" name="action" value="Ver info">Ver info</button>
+
+
+
         </form>
-        <p style="color:red;">
-            <%= request.getAttribute("mensaje") !=null ? request.getAttribute("mensaje") : "" %>
-        </p>
-        </div>
-    </body>
+    </div>
+</body>
 
-    </html>
+</html>
 ```
 
 
